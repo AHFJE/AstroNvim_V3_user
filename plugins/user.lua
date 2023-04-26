@@ -1,0 +1,90 @@
+return {
+  -- You can also add new plugins here as well:
+  -- Add plugins, the lazy syntax
+  -- "andweeb/presence.nvim",
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "BufRead",
+    config = function() require("lsp_signature").setup() end,
+  },
+  -- {
+  --   "jiaoshijie/undotree",
+  --   requires = {
+  --     "nvim-lua/plenary.nvim",
+  --   },
+  --   config = function()
+  --     require("undotree").setup {
+  --       float_diff = true, -- using float window previews diff, set this `true` will disable layout option
+  --       layout = "left_bottom", -- "left_bottom", "left_left_bottom"
+  --       ignore_filetype = {
+  --         "Undotree",
+  --         "UndotreeDiff",
+  --         "qf",
+  --         "TelescopePrompt",
+  --         "spectre_panel",
+  --         "tsplayground",
+  --       },
+  --       window = {
+  --         winblend = 30,
+  --       },
+  --       keymaps = {
+  --         ["j"] = "move_next",
+  --         ["k"] = "move_prev",
+  --         ["J"] = "move_change_next",
+  --         ["K"] = "move_change_prev",
+  --         ["<cr>"] = "action_enter",
+  --         ["p"] = "enter_diffbuf",
+  --         ["q"] = "quit",
+  --       },
+  --     }
+  --   end,
+  -- },
+  -- {
+  --   "HiPhish/nvim-ts-rainbow2",
+  --   dependencies = { "nvim-treesitter/nvim-treesitter" },
+  --   event = "User AstroFile",
+  --   config = function()
+  --     local rainbow = require "ts-rainbow"
+  --     require("nvim-treesitter.configs").setup {
+  --       rainbow = {
+  --         enable = true,
+  --         query = "rainbow-parens",
+  --         strategy = rainbow.strategy.global,
+  --         hlgroups = {
+  --           "TSRainbowRed",
+  --           "TSRainbowYellow",
+  --           "TSRainbowBlue",
+  --           "TSRainbowOrange",
+  --           "TSRainbowGreen",
+  --           "TSRainbowViolet",
+  --           "TSRainbowCyan",
+  --         },
+  --       },
+  --     }
+  --   end,
+  -- },
+  -- {
+  --   "p00f/nvim-ts-rainbow",
+  --   config = function()
+  --     require("nvim-treesitter.configs").setup {
+  --       highlight = {
+  --         enable = true,
+  --         additional_vim_regex_highlighting = false,
+  --       },
+  --       context_commentstring = {
+  --         enable = true,
+  --         enable_autocmd = false,
+  --       },
+  --       rainbow = {
+  --         enable = true,
+  --         disable = { "html" },
+  --         extended_mode = false,
+  --         max_file_lines = nil,
+  --       },
+  --       autotag = { enable = true },
+  --       incremental_selection = { enable = true },
+  --       indent = { enable = false },
+  --     }
+  --   end,
+  -- },
+}
