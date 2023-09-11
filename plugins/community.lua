@@ -35,9 +35,9 @@ return {
         offsets = {
           {
             filetype = "neo-tree",
-            text = "AHFJE",
+            text = "󰫮 󰫵 󰫳 󰫷 󰫲",
             text_align = "center",
-            separator = true,
+            -- separator = true,
           },
         },
         separator_style = "slant",
