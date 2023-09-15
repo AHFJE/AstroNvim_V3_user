@@ -18,6 +18,7 @@ return {
   -- { import = "astrocommunity.utility.noice-nvim" },
   -- { import = "astrocommunity.code-runner.sniprun" },
   -- { import = "astrocommunity.utility.neodim" },
+  { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.bars-and-lines.bufferline-nvim" },
   {
     "akinsho/bufferline.nvim",
@@ -47,6 +48,19 @@ return {
           delay = 200,
           reveal = { "close" },
         },
+      },
+    },
+  },
+  {
+    "HiPhish/rainbow-delimiters.nvim",
+    opts = {
+      highlight = {
+        "RainbowDelimiterYellow",
+        "RainbowDelimiterBlue",
+        "RainbowDelimiterOrange",
+        "RainbowDelimiterGreen",
+        "RainbowDelimiterViolet",
+        "RainbowDelimiterCyan",
       },
     },
   },

@@ -20,7 +20,7 @@ return {
         if node.type == "directory" or node:has_children() then
           if not node:is_expanded() then -- if unexpanded, expand
             state.commands.toggle_node(state)
-          else                           -- if expanded and has children, seleect the next child
+          else -- if expanded and has children, seleect the next child
             require("neo-tree.ui.renderer").focus_node(state, node:get_child_ids()[1])
           end
         else -- if not a directory just open it
@@ -49,9 +49,9 @@ return {
           if result.val and result.val ~= "" then
             ---@diagnostic disable-next-line: missing-parameter
             vim.list_extend(messages, {
-              { ("%s."):format(i),           "Identifier" },
+              { ("%s."):format(i), "Identifier" },
               { (" %s: "):format(result.msg) },
-              { result.val,                  "String" },
+              { result.val, "String" },
               { "\n" },
             })
           end
@@ -130,7 +130,7 @@ return {
         commands = global_commands,
         follow_current_file = true, -- This will find and focus the file in the active buffer every
         -- time the current file is changed while the tree is open.
-        group_empty_dirs = true,    -- when true, empty folders will be grouped together
+        group_empty_dirs = true, -- when true, empty folders will be grouped together
         show_unloaded = true,
         window = {
           mappings = {
